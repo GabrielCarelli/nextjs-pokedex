@@ -1,6 +1,5 @@
 import { fetchPokemon } from "./actions/getPokemon";
 import { LoadPokemon } from "./components/LoadPokemon";
-import Search from "./components/Search";
 
 const Page = async ({
   searchParams,
@@ -16,8 +15,7 @@ const Page = async ({
 
   const pokemon = await fetchPokemon({ search });
   return (
-    <div className="max-w-[1500px] w-[95%] mx-auto">
-      <Search search={search} />
+    <div className="max-w-[1500px] w-[95%] mx-auto mt-5">
       <ul key={Math.random()}>
         <LoadPokemon
           search={search}
